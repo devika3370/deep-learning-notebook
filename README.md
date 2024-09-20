@@ -5,8 +5,8 @@ Hi! I'm Devika, and welcome to my repository. This is a collection of notes, sum
 ## List of Papers
 
 ### 3D Reconstruction
-- [WonderWorld: Interactive 3D Scene Generation from a Single Image](https://arxiv.org/pdf/2406.09394)[Notes](./wonder_world.md)
-- [3D Reconstruction with Spatial Memory](https://arxiv.org/pdf/2408.16061)[Notes](./spann_3R.md)
+- [WonderWorld: Interactive 3D Scene Generation from a Single Image](https://arxiv.org/pdf/2406.09394) (June 2024)[[Notes]](./wonder_world.md)
+- [3D Reconstruction with Spatial Memory](https://arxiv.org/pdf/2408.16061) (August 2024) [[Notes]](./spann_3R.md)
 
 
 

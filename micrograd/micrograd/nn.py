@@ -1,3 +1,4 @@
+# Neural networks library built on top of the backpropagation engine. 
 import random
 from micrograd.engine import Value
 

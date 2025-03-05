@@ -10,5 +10,5 @@ Hi! I'm Devika, and welcome to my repository. This is a collection of notes, sum
 
 
 
-## Modern DL Concepts
- - [Attention](./Modern%20DL%20Concepts/attention.md)
+## Contents
+* MicroGrad

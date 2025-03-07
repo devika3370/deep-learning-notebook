@@ -11,5 +11,10 @@ https://karpathy.ai/ <br>
 MicroGrad is a tiny auto grad engine that implements backpropagation. Backpropagation is an algorithm we use to estimate gradients. It’s an application of chain rule through the expression graph. Unlike traditional implementations that operate on vectors for parallelization and speed, MicroGrad processes backpropagation at a scalar level, offering a fundamental, low-level perspective on how the algorithm works.
 <br><br>
 <strong>Understanding derivatives: </strong> slope of a line tangent to the function's graph at that point - how much the function's value will change if the input is slightly nudged in one direction or another. 
-![alt text](images/image.png)
+<br>
+![alt text](images/image.png)\
 
+<br>
+
+Neuron <br>
+![alt text](images/neuron.png)

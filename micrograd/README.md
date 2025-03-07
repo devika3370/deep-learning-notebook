@@ -1,20 +1,27 @@
-## MicroGrad
+# MicroGrad  
 
-This is an implementation of micrograd - a tiny autograd engine developed by Andrej Karpathy. The link to the original implementation can be found here: https://github.com/karpathy/micrograd
+MicroGrad is a minimalistic autograd engine designed to illustrate the core principles of backpropagation. Originally developed by [Andrej Karpathy](https://karpathy.ai/), it serves as an educational tool to understand automatic differentiation from the ground up.  
 
-### Important Links
-https://www.youtube.com/watch?v=VMj-3S1tku0 <br>
-https://github.com/karpathy/micrograd <br>
-https://karpathy.ai/ <br>
+🔗 **Original Implementation**: [karpathy/micrograd](https://github.com/karpathy/micrograd)  
 
-### Notes
-MicroGrad is a tiny auto grad engine that implements backpropagation. Backpropagation is an algorithm we use to estimate gradients. It’s an application of chain rule through the expression graph. Unlike traditional implementations that operate on vectors for parallelization and speed, MicroGrad processes backpropagation at a scalar level, offering a fundamental, low-level perspective on how the algorithm works.
-<br><br>
-<strong>Understanding derivatives: </strong> slope of a line tangent to the function's graph at that point - how much the function's value will change if the input is slightly nudged in one direction or another. 
-<br>
-![alt text](images/image.png)\
+## Important Links  
 
-<br>
+- [MicroGrad Explained - YouTube](https://www.youtube.com/watch?v=VMj-3S1tku0)  
+- [MicroGrad GitHub Repository](https://github.com/karpathy/micrograd)  
+- [Andrej Karpathy’s Website](https://karpathy.ai/)  
 
-Neuron <br>
-![alt text](images/neuron.png)
+## Understanding MicroGrad  
+
+MicroGrad is a tiny autograd engine that implements **backpropagation**, a key algorithm for computing gradients. Unlike traditional deep learning frameworks that perform parallelized tensor operations, MicroGrad operates at a **scalar level**, offering a low-level, intuitive perspective on how gradients propagate through a computational graph.  
+
+### Key Concepts  
+- Computes derivatives efficiently using the chain rule.  
+- Represents computations as a directed acyclic graph (DAG).  
+- Propagates gradients through the graph to update model parameters.  
+- Understanding Derivatives: A **derivative** represents the **slope** of a function at a given point. It tells us how much a function’s output changes with a small input change. MicroGrad builds this understanding by computing derivatives through an explicit computational graph.
+
+### Visualizing a Neuron  
+
+<img src="images/neuron.png" alt="Neuron" width="400"/>  
+
+## Topological Sorting  

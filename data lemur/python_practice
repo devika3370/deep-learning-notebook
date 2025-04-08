@@ -1,0 +1,112 @@
+# convert to base 13
+def convertToBase13(n):
+  if n == 0:
+    return 0
+  
+  # num = 13 * quotient + remainder
+  digits = '0123456789ABC'
+  negative = n < 0
+  n = abs(n)
+  
+  result = ''
+  while n > 0:
+    result = digits[n % 13] + result
+    n //= 13
+  
+  return '-' + result if negative else result
+
+
+  # Toeplitz matrix - all elements in the diagonal are the same 
+def is_same_stripes(matrix):
+    if not matrix:
+        return True  # Empty matrix can be considered valid
+        
+    if len(matrix) == 1:
+        return True
+        
+    rows, cols = len(matrix), len(matrix[0])
+        
+    for i in range(1, rows):
+        for j in range(1, cols):
+            if matrix[i][j] != matrix[i - 1][j - 1]:
+                return False
+    return True
+    
+# simple factorial using recursion 
+def factorial(n):
+  if n == 1:
+    return 1
+  if n == 0:
+    return 1
+    
+  return n * factorial(n-1)
+
+# add 1 to the last element of the list and carry on 
+# example ['1', '2', '3'] --> ['1', '2', '4'] or ['6', '9'] -> ['7', '0']
+def another_one(digits):
+  num = int(''.join(map(str, digits)))
+  num += 1
+  answer = []
+  for digit in str(num):
+    answer.append(int(digit))
+  return answer
+
+
+# identify the smallest number in the row 
+# check if it is the largest number in the column
+# if such a number exists - return it - if not return -1
+def weakest_strong_link(strength):
+  rows = len(strength)
+  columns = len(strength[0])
+
+  for i in range(rows):
+    smallest_number = min(strength[i])
+    col_index = strength[i].index(smallest_number)
+    
+    is_strongest = True
+    for j in range(rows):
+      if strength[j][col_index] > smallest_number:
+        is_strongest = False
+        break
+      
+    if is_strongest:
+      return smallest_number
+
+  return -1
+
+
+# return true if any value appears at least twice in the array 
+# return false if all elements are distinct
+def contains_duplicate(input) -> bool:
+    seen = set()
+    for num in input:
+        if num in seen:
+            return True
+        seen.add(num)
+    return False
+
+
+# convert roman numerals to integers
+def romanToInt(s):
+  roman_map = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+
+  total = 0
+  prev_value = 0
+
+  for char in reversed(s):
+    value = roman_map[char]
+    if value < prev_value:
+        total -= value  # Subtract if smaller value comes before a larger one (like IV = 4)
+    else:
+        total += value
+        prev_value = value
+
+  return total
